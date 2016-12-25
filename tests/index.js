@@ -11,6 +11,43 @@ process.chdir( 'tests' );
 const source = readFileSync( 'fixtures/index.js', 'utf8' );
 
 describe( 'babel-plugin-banner', () => {
+	it( 'requires banner to be a string', () => {
+		const banners = [
+			null,
+			undefined,
+			1,
+			{},
+			[]
+		];
+
+		for ( const banner of banners ) {
+			const fn = () => {
+				babel.transform( source, {
+					plugins: [
+						[ plugin, {
+							banner
+						} ]
+					]
+				} );
+			};
+
+			expect( fn ).to.throw( TypeError, 'Banner must be a string.' );
+		}
+
+		const fn = () => {
+			babel.transform( source, {
+				plugins: [
+					[ plugin, {
+						banner: ''
+					} ]
+				]
+			} );
+		};
+
+		expect( fn ).not.to.throw( TypeError, 'Banner must be a string.' );
+
+	} );
+
 	it( 'adds banner to the beginning of the code', () => {
 		const expected = readFileSync( 'fixtures/index.expected.js', 'utf8' ).trim();
 
