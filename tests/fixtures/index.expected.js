@@ -1,2 +1,2 @@
 /* hubla bubla */
-console.log( 'Test' );
+console.log('Test');
