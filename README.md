@@ -1,6 +1,6 @@
 # babel-plugin-banner [![Build Status](https://travis-ci.org/Comandeer/babel-plugin-banner.svg?branch=master)](https://travis-ci.org/Comandeer/babel-plugin-banner) [![Dependency Status](https://david-dm.org/Comandeer/babel-plugin-banner.svg)](https://david-dm.org/Comandeer/babel-plugin-banner) [![devDependency Status](https://david-dm.org/Comandeer/babel-plugin-banner/dev-status.svg)](https://david-dm.org/Comandeer/babel-plugin-banner#info=devDependencies)
 
-Prepends given string to the beginning of babelified code.
+Prepends given comment to the beginning of babelified code.
 
 ## Installation
 
@@ -14,7 +14,7 @@ npm install @comandeer/babel-plugin-banner [--save-dev]
 {
   "presets": ["es2015"],
   "plugins": [
-    ["babel-plugin-banner", {
+    ["@comandeer/babel-plugin-banner", {
       "banner": "/*! Some nice comment */"
     }]
   ]
