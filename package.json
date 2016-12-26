@@ -7,12 +7,13 @@
     "prebuild": "rimraf dist",
     "lint": "eslint src/**/*.js tests/*.js",
     "pretest": "npm run lint",
-    "test": "mocha tests/index.js",
+    "test": "mocha tests/*.js",
     "preversion": "npm test",
     "postversion": "git push origin && git push origin --tags"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "repository": {
     "type": "git",
