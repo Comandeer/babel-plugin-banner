@@ -1,6 +1,5 @@
 'use strict';
 
-const babylon = require( 'babylon' );
 const utils = require( './utils' );
 const isComment = utils.isComment;
 const getCommentContent = utils.getCommentContent;
