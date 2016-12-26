@@ -1,7 +1,7 @@
 {
   "name": "@comandeer/babel-plugin-banner",
   "version": "0.0.0",
-  "description": "Simple Babel plugin to prepend something to the beginning of transformed code.",
+  "description": "Simple Babel plugin to prepend comment to the beginning of transformed code.",
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist",
