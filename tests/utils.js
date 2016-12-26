@@ -4,6 +4,7 @@ const chai = require( 'chai' );
 const utils = require( '../utils' );
 const expect = chai.expect;
 const isComment = utils.isComment;
+const getCommentContent = utils.getCommentContent;
 
 function testInput( input, fn, expected ) {
 	if ( !Array.isArray( input ) ) {
@@ -13,6 +14,14 @@ function testInput( input, fn, expected ) {
 	for ( const value of input ) {
 		expect( fn( value ), value ).to.equal( expected );
 	}
+}
+
+function testInputOutput( map, fn ) {
+	Object.keys( map ).forEach( ( key ) => {
+		const expected = map[ key ];
+
+		expect( fn( key ), key ).to.equal( expected );
+	} );
 }
 
 describe( 'isComment', () => {
@@ -45,5 +54,29 @@ describe( 'isComment', () => {
 
 		testInput( comments, isComment, true );
 		testInput( notComments, isComment, false );
+	} );
+} );
+
+describe( 'getCommentContent', () => {
+	it( 'is a function', () => {
+		expect( getCommentContent ).to.be.a( 'function' );
+	} );
+
+	it( 'correctly gets content from given comment', () => {
+		const comments = {
+			'/*test*/': 'test',
+			'/*! Test */': '! Test ',
+			'/**/': '',
+			'/*\n*/': '\n',
+			'/*T\ne\ns\nt */': 'T\ne\ns\nt ',
+			'//test': 'test',
+			'//Test\n': 'Test\n',
+			'// test': ' test',
+			'// test\n': ' test\n',
+			'//': '',
+			'//\n': '\n'
+		};
+
+		testInputOutput( comments, getCommentContent );
 	} );
 } );
