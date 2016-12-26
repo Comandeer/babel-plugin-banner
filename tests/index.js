@@ -11,7 +11,7 @@ process.chdir( 'tests' );
 const source = readFileSync( 'fixtures/index.js', 'utf8' );
 
 describe( 'babel-plugin-banner', () => {
-	it( 'requires banner to be a string', () => {
+	it( 'requires banner to be a valid comment', () => {
 		const banners = [
 			null,
 			undefined,
@@ -31,20 +31,20 @@ describe( 'babel-plugin-banner', () => {
 				} );
 			};
 
-			expect( fn ).to.throw( TypeError, 'Banner must be a string.' );
+			expect( fn ).to.throw( TypeError, 'Banner must be a valid comment.' );
 		}
 
 		const fn = () => {
 			babel.transform( source, {
 				plugins: [
 					[ plugin, {
-						banner: ''
+						banner: '/**/'
 					} ]
 				]
 			} );
 		};
 
-		expect( fn ).not.to.throw( TypeError, 'Banner must be a string.' );
+		expect( fn ).not.to.throw( TypeError, 'Banner must be a valid comment.' );
 
 	} );
 
