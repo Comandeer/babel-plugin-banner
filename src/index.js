@@ -1,10 +1,7 @@
-'use strict';
+import { isComment } from './utils.js';
+import { getCommentContent } from './utils.js';
 
-const utils = require( './utils' );
-const isComment = utils.isComment;
-const getCommentContent = utils.getCommentContent;
-
-module.exports = function( babel ) {
+function babelPlugin( babel ) {
 	const t = babel.types;
 
 	return {
@@ -29,3 +26,5 @@ module.exports = function( babel ) {
 		}
 	};
 }
+
+export default babelPlugin;

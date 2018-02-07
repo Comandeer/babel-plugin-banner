@@ -1,20 +1,21 @@
-'use strict';
-
 const oneLineRegex = /^\/\/(.*?)\n?$/;
 const multiLineRegex = /^\/\*([\s\S]*?)\*\/$/;
 
-exports.isComment = function( input ) {
+function isComment( input ) {
 	if ( oneLineRegex.test( input ) || multiLineRegex.test( input ) ) {
 		return true;
 	}
 
 	return false;
-};
+}
 
-exports.getCommentContent = function( input ) {
+function getCommentContent( input ) {
 	if ( oneLineRegex.test( input ) ) {
 		return input.replace( /^\/\//, '' );
 	}
 
 	return input.replace( /^\/\*/, '' ).replace( /\*\/$/, '' );
 }
+
+export { isComment };
+export { getCommentContent };

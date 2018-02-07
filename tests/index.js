@@ -1,11 +1,9 @@
-'use strict';
+import { readFileSync } from 'fs';
+import chai from 'chai';
+import { transform } from 'babel-core';
+import plugin from '../src/index.js';
 
-const readFileSync = require( 'fs' ).readFileSync;
-const chai = require( 'chai' );
 const expect = chai.expect;
-const plugin = require( '../index' );
-const babel = require( 'babel-core' );
-
 process.chdir( 'tests' );
 
 const source = readFileSync( 'fixtures/index.js', 'utf8' );
@@ -22,7 +20,7 @@ describe( 'babel-plugin-banner', () => {
 
 		for ( const banner of banners ) {
 			const fn = () => {
-				babel.transform( source, {
+				transform( source, {
 					plugins: [
 						[ plugin, {
 							banner
@@ -35,7 +33,7 @@ describe( 'babel-plugin-banner', () => {
 		}
 
 		const fn = () => {
-			babel.transform( source, {
+			transform( source, {
 				plugins: [
 					[ plugin, {
 						banner: '/**/'
@@ -51,7 +49,7 @@ describe( 'babel-plugin-banner', () => {
 	it( 'adds banner to the beginning of the code', () => {
 		const expected = readFileSync( 'fixtures/index.expected.js', 'utf8' ).trim();
 
-		const result = babel.transform( source, {
+		const result = transform( source, {
 			plugins: [
 				[ plugin, {
 					banner: '/* hubla bubla */'
@@ -65,7 +63,7 @@ describe( 'babel-plugin-banner', () => {
 	it( 'does not add newline if proper option is set to false', () => {
 		const expected = readFileSync( 'fixtures/index-no-newline.expected.js', 'utf8' ).trim();
 
-		const result = babel.transform( source, {
+		const result = transform( source, {
 			plugins: [
 				[ plugin, {
 					banner: '/* hubla bubla */',

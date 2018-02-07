@@ -1,10 +1,8 @@
-'use strict';
+import chai from 'chai';
+import { isComment } from '../src/utils.js';
+import { getCommentContent } from '../src/utils.js';
 
-const chai = require( 'chai' );
-const utils = require( '../utils' );
 const expect = chai.expect;
-const isComment = utils.isComment;
-const getCommentContent = utils.getCommentContent;
 
 function testInput( input, fn, expected ) {
 	if ( !Array.isArray( input ) ) {
