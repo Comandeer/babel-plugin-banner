@@ -2,14 +2,17 @@
   "name": "@comandeer/babel-plugin-banner",
   "version": "1.0.0",
   "description": "Simple Babel plugin to prepend comment to the beginning of transformed code.",
-  "main": "index.js",
+  "main": "dist/babel-plugin-banner.js",
+  "jsnext:main": "dist/babel-plugin-banner.es2015.js",
+  "module": "dist/babel-plugin-banner.es2015.js",
   "scripts": {
     "prebuild": "rimraf dist",
+    "build": "rlb",
     "lint": "eslint src/**/*.js tests/*.js",
     "pretest": "npm run lint",
-    "test": "mocha tests/*.js",
-    "preversion": "npm test",
-    "postversion": "git push origin && git push origin --tags"
+    "test": "mocha tests/*.js --timeout 15000 --require babel-register",
+    "version": "npm test && npm run build && git add -f dist/",
+    "postversion": "git rm -r --cached dist/ && git commit -m \"chore(dist): clean after release [ci skip]\" && git push origin && git push origin --tags"
   },
   "files": [
     "index.js",
