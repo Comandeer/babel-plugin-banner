@@ -1,22 +1,20 @@
 import { isComment } from './utils.js';
 import { getCommentContent } from './utils.js';
 
-function babelPlugin( babel ) {
-	const t = babel.types;
+function babelPlugin( { types } ) {
+	const { noop } = types;
 
 	return {
 		visitor: {
-			Program: function Program( path, $ ) {
-				const options = $.opts;
-				const banner = options.banner;
-				const newLine = typeof options.newLine !== 'undefined' ? Boolean( options.newLine ) : true;
+			Program: function Program( path, { opts } ) {
+				const { banner, newLine = true } = opts;
 
 				if ( typeof banner !== 'string' || !isComment( banner ) ) {
 					throw new TypeError( 'Banner must be a valid comment.' );
 				}
 
 				if ( newLine ) {
-					path.unshiftContainer( 'body', t.noop() );
+					path.unshiftContainer( 'body', noop() );
 				}
 
 				if ( isComment( banner ) ) {
