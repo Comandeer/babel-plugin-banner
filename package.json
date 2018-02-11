@@ -10,7 +10,8 @@
     "build": "rlb",
     "lint": "eslint src/**/*.js tests/*.js",
     "pretest": "npm run lint",
-    "test": "mocha tests/*.js --timeout 15000 --require babel-register",
+    "test": "nyc mocha tests/*.js --timeout 15000 --require babel-register",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "version": "npm test && npm run build && git add -f dist/",
     "postversion": "git rm -r --cached dist/ && git commit -m \"chore(dist): clean after release [ci skip]\" && git push origin && git push origin --tags"
   },
@@ -38,6 +39,15 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "dist/**/*.js",
+      "tests/**/*.js"
+    ]
+  },
   "devDependencies": {
     "@comandeer/rollup-lib-bundler": "^0.4.0",
     "babel-core": "^6.21.0",
@@ -45,8 +55,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.0.0",
+    "codecov": "^3.0.0",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^4.1.0",
-    "mocha": "^5.0.0"
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1"
   }
 }
