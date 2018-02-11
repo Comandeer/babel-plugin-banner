@@ -1,12 +1,12 @@
 {
   "name": "@comandeer/babel-plugin-banner",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple Babel plugin to prepend comment to the beginning of transformed code.",
   "main": "dist/babel-plugin-banner.js",
   "jsnext:main": "dist/babel-plugin-banner.es2015.js",
   "module": "dist/babel-plugin-banner.es2015.js",
   "scripts": {
-  	"commitmsg": "is-ci && exit 0 || commitplease .git/COMMIT_EDITMSG",
+    "commitmsg": "is-ci && exit 0 || commitplease .git/COMMIT_EDITMSG",
     "prebuild": "rimraf dist",
     "build": "rlb",
     "lint": "eslint src/**/*.js tests/*.js",
