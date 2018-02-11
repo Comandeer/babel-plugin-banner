@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.0.2] – 2018-02-11
+### Fixed
+* [#21] Incorrect files distributed via npm.
+
 ## [2.0.1] – 2018-02-11
 ### Fixed
 * [#19] Add missing utils exports.
@@ -28,6 +32,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#9]: https://github.com/Comandeer/babel-plugin-banner/issues/9
 [#12]: https://github.com/Comandeer/babel-plugin-banner/issues/12
 [#19]: https://github.com/Comandeer/babel-plugin-banner/issues/19
+[#21]: https://github.com/Comandeer/babel-plugin-banner/issues/21
 
+[2.0.2]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v1.0.0...v2.0.0
