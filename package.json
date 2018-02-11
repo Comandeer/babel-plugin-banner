@@ -67,6 +67,9 @@
       "tests/**/*.js"
     ]
   },
+  "peerDependencies": {
+    "babel-core": ">=6.21.0"
+  },
   "devDependencies": {
     "@comandeer/is-ci": "^1.0.0",
     "@comandeer/rollup-lib-bundler": "^0.4.0",
