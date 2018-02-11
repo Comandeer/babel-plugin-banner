@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.0.0]
+## [2.0.0] – 2018-02-11
 ### Added
-* [#6] Add official support for Node 8+ and npm 5+.
 * [#12] BREAKING CHANGE: Add `babel-core` as peer-dependency.
+* [#6] Add official support for Node 8+ and npm 5+.
 
 ### Changed
 * [#9] BREAKING CHANGE: Introduce build system, which brings also full rewrite to ES6+ and ESM.
