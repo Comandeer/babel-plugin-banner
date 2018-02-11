@@ -24,3 +24,5 @@ function babelPlugin( { types } ) {
 }
 
 export default babelPlugin;
+export { isComment };
+export { getCommentContent };
