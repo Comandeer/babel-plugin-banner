@@ -1,4 +1,4 @@
-# babel-plugin-banner [![Build Status](https://travis-ci.org/Comandeer/babel-plugin-banner.svg?branch=master)](https://travis-ci.org/Comandeer/babel-plugin-banner) [![Dependency Status](https://david-dm.org/Comandeer/babel-plugin-banner.svg)](https://david-dm.org/Comandeer/babel-plugin-banner) [![devDependency Status](https://david-dm.org/Comandeer/babel-plugin-banner/dev-status.svg)](https://david-dm.org/Comandeer/babel-plugin-banner#info=devDependencies)
+# babel-plugin-banner [![Build Status](https://travis-ci.org/Comandeer/babel-plugin-banner.svg?branch=master)](https://travis-ci.org/Comandeer/babel-plugin-banner) [![Dependency Status](https://david-dm.org/Comandeer/babel-plugin-banner.svg)](https://david-dm.org/Comandeer/babel-plugin-banner) [![devDependency Status](https://david-dm.org/Comandeer/babel-plugin-banner/dev-status.svg)](https://david-dm.org/Comandeer/babel-plugin-banner#info=devDependencies) [![npm (scoped)](https://img.shields.io/npm/v/@comandeer/babel-plugin-banner.svg)]() [![Greenkeeper badge](https://badges.greenkeeper.io/Comandeer/babel-plugin-banner.svg)](https://greenkeeper.io/)
 
 Prepends given comment to the beginning of babelified code.
 
@@ -20,6 +20,10 @@ npm install @comandeer/babel-plugin-banner [--save-dev]
   ]
 }
 ```
+
+Available options:
+* `banner`: content of the banner comment; must be a valid JS comment,
+* `newLine` (default: `true`): indicates if inserted comment should be followed by new line.
 
 ## License
 
