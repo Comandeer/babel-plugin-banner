@@ -17,9 +17,7 @@ function babelPlugin( { types } ) {
 					path.unshiftContainer( 'body', noop() );
 				}
 
-				if ( isComment( banner ) ) {
-					path.addComment( 'leading', getCommentContent( banner ) );
-				}
+				path.addComment( 'leading', getCommentContent( banner ) );
 			}
 		}
 	};
