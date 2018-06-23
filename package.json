@@ -16,6 +16,9 @@
     "version": "npm test && npm run build && git add -f dist/",
     "postversion": "git rm -r --cached dist/ && git commit -m \"chore(dist): clean after release [ci skip]\" && git push origin && git push origin --tags"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "files": [
     "dist"
   ],
@@ -81,9 +84,9 @@
     "codecov": "^3.0.0",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^2.0.0",
-    "eslint": "^4.1.0",
+    "eslint": "^5.0.0",
     "husky": "^0.14.3",
     "mocha": "^5.0.0",
-    "nyc": "^11.4.1"
+    "nyc": "^12.0.2"
   }
 }
