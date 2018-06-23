@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [3.0.0] – 2018-06-23
+### Added
+* [#26] Add support for Node 10.
+
+### Removed
+* [#23] **BREAKING CHANGE**: Remove support for Node < 6 and unstable Node versions (7).
+
 ## [2.0.2] – 2018-02-11
 ### Fixed
 * [#21] Incorrect files distributed via npm.
@@ -34,6 +41,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#19]: https://github.com/Comandeer/babel-plugin-banner/issues/19
 [#21]: https://github.com/Comandeer/babel-plugin-banner/issues/21
 
+[3.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v1.0.0...v2.0.0
