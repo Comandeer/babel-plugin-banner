@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import chai from 'chai';
-import { transform } from 'babel-core';
+import { transform } from '@babel/core';
 import plugin from '../src/index.js';
 
 const expect = chai.expect;
@@ -53,21 +53,6 @@ describe( 'babel-plugin-banner', () => {
 			plugins: [
 				[ plugin, {
 					banner: '/* hubla bubla */'
-				} ]
-			]
-		} );
-
-		expect( result.code ).to.equal( expected );
-	} );
-
-	it( 'does not add newline if proper option is set to false', () => {
-		const expected = readFileSync( 'fixtures/index-no-newline.expected.js', 'utf8' ).trim();
-
-		const result = transform( source, {
-			plugins: [
-				[ plugin, {
-					banner: '/* hubla bubla */',
-					newLine: false
 				} ]
 			]
 		} );

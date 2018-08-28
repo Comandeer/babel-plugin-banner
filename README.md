@@ -24,8 +24,7 @@ npm install @comandeer/babel-plugin-banner [--save-dev]
 ```
 
 Available options:
-* `banner`: content of the banner comment; must be a valid JS comment,
-* `newLine` (default: `true`): indicates if inserted comment should be followed by new line.
+* `banner`: content of the banner comment; must be a valid JS comment.
 
 ## License
 
