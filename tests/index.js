@@ -59,19 +59,4 @@ describe( 'babel-plugin-banner', () => {
 
 		expect( result.code ).to.equal( expected );
 	} );
-
-	it( 'does not add newline if proper option is set to false', () => {
-		const expected = readFileSync( 'fixtures/index-no-newline.expected.js', 'utf8' ).trim();
-
-		const result = transform( source, {
-			plugins: [
-				[ plugin, {
-					banner: '/* hubla bubla */',
-					newLine: false
-				} ]
-			]
-		} );
-
-		expect( result.code ).to.equal( expected );
-	} );
 } );
