@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import chai from 'chai';
-import { transform } from 'babel-core';
+import { transform } from '@babel/core';
 import plugin from '../src/index.js';
 
 const expect = chai.expect;
