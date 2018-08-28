@@ -48,6 +48,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#12]: https://github.com/Comandeer/babel-plugin-banner/issues/12
 [#19]: https://github.com/Comandeer/babel-plugin-banner/issues/19
 [#21]: https://github.com/Comandeer/babel-plugin-banner/issues/21
+[#23]: https://github.com/Comandeer/babel-plugin-banner/issues/23
 [#26]: https://github.com/Comandeer/babel-plugin-banner/issues/26
 [#33]: https://github.com/Comandeer/babel-plugin-banner/issues/33
 
