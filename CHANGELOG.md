@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [4.0.0] – 2018-08-28
+### Added
+* [#33] Add support for Babel 7.
+
+### Removed
+* [#33] **BREAKING CHANGE**: Remove support for Babel < 7.
+* [#33] **BREAKING CHANGE**: Remove `newLine` option.
+
 ## [3.0.0] – 2018-06-23
 ### Added
 * [#26] Add support for Node 10.
@@ -40,7 +48,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#12]: https://github.com/Comandeer/babel-plugin-banner/issues/12
 [#19]: https://github.com/Comandeer/babel-plugin-banner/issues/19
 [#21]: https://github.com/Comandeer/babel-plugin-banner/issues/21
+[#26]: https://github.com/Comandeer/babel-plugin-banner/issues/26
+[#33]: https://github.com/Comandeer/babel-plugin-banner/issues/33
 
+[4.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.0...v2.0.1
