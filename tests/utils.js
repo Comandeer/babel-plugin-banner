@@ -34,6 +34,7 @@ describe( 'isComment', () => {
 			'/**/',
 			'/*\n*/',
 			'/*T\ne\ns\nt */',
+			'/*T\ne\ns\nt */\n',
 			'//test',
 			'//Test\n',
 			'// test',

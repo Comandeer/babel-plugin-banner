@@ -1,5 +1,5 @@
 const oneLineRegex = /^\/\/(.*?)\n?$/;
-const multiLineRegex = /^\/\*([\s\S]*?)\*\/$/;
+const multiLineRegex = /^\/\*([\s\S]*?)\*\/\n?$/;
 
 function isComment( input ) {
 	if ( oneLineRegex.test( input ) || multiLineRegex.test( input ) ) {
