@@ -1,6 +1,6 @@
 {
   "name": "@comandeer/babel-plugin-banner",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Simple Babel plugin to prepend comment to the beginning of transformed code.",
   "main": "dist/babel-plugin-banner.js",
   "jsnext:main": "dist/babel-plugin-banner.es2015.js",
