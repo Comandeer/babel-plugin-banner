@@ -14,7 +14,7 @@ function getCommentContent( input ) {
 		return input.replace( /^\/\//, '' );
 	}
 
-	return input.replace( /^\/\*/, '' ).replace( /\*\/$/, '' );
+	return input.replace( /^\/\*/, '' ).replace( /\*\/\n?$/, '' );
 }
 
 export { isComment };

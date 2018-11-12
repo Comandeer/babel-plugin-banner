@@ -68,6 +68,7 @@ describe( 'getCommentContent', () => {
 			'/**/': '',
 			'/*\n*/': '\n',
 			'/*T\ne\ns\nt */': 'T\ne\ns\nt ',
+			'/*Test*/\n': 'Test',
 			'//test': 'test',
 			'//Test\n': 'Test\n',
 			'// test': ' test',
