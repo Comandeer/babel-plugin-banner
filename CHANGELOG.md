@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [4.1.0] – 2018-11-12
+### Added
+* [#38] Add support for newline at the end of multiline comment. Thanks to [Aaron Hardy](https://github.com/Aaronius)!
+
 ## [4.0.0] – 2018-08-28
 ### Added
 * [#33] Add support for Babel 7.
@@ -51,6 +55,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#23]: https://github.com/Comandeer/babel-plugin-banner/issues/23
 [#26]: https://github.com/Comandeer/babel-plugin-banner/issues/26
 [#33]: https://github.com/Comandeer/babel-plugin-banner/issues/33
+[#38]: https://github.com/Comandeer/babel-plugin-banner/pull/38
 
 [4.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.2...v3.0.0
