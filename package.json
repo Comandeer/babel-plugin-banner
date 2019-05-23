@@ -6,7 +6,6 @@
   "jsnext:main": "dist/babel-plugin-banner.es2015.js",
   "module": "dist/babel-plugin-banner.es2015.js",
   "scripts": {
-    "commitmsg": "is-ci && exit 0 || commitplease .git/COMMIT_EDITMSG",
     "prebuild": "rimraf dist",
     "build": "rlb",
     "lint": "eslint src/**/*.js tests/*.js",
