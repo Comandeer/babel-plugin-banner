@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [5.0.0] – 2019-06-29
+### Added
+* [#48] Support for Node 12.
+
+### Removed
+* [#48] **BREAKING CHANGE**: support for Node 6.
+
 ## [4.1.0] – 2018-11-12
 ### Added
 * [#38] Add support for newline at the end of multiline comment. Thanks to [Aaron Hardy](https://github.com/Aaronius)!
@@ -56,7 +63,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#26]: https://github.com/Comandeer/babel-plugin-banner/issues/26
 [#33]: https://github.com/Comandeer/babel-plugin-banner/issues/33
 [#38]: https://github.com/Comandeer/babel-plugin-banner/pull/38
+[#48]: https://github.com/Comandeer/babel-plugin-banner/issues/48
 
+[5.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v4.1.0...v5.0.0
+[4.1.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.2...v3.0.0
 [2.0.2]: https://github.com/Comandeer/babel-plugin-banner/compare/v2.0.1...v2.0.2
