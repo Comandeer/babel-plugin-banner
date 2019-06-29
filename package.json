@@ -16,7 +16,7 @@
     "postversion": "git rm -r --cached dist/ && git commit -m \"chore(dist): clean after release [ci skip]\" && git push origin && git push origin --tags"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "files": [
     "dist"
@@ -72,19 +72,19 @@
     "@babel/core": ">=7.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "@comandeer/eslint-config": "^0.1.0",
-    "@comandeer/is-ci": "^1.0.0",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@comandeer/eslint-config": "^0.2.0",
+    "@comandeer/is-ci": "^2.0.0",
     "@comandeer/rollup-lib-bundler": "^0.8.0",
-    "chai": "^4.0.0",
-    "codecov": "^3.0.0",
+    "chai": "^4.2.0",
+    "codecov": "^3.5.0",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^2.0.0",
-    "eslint": "^5.0.0",
-    "husky": "^2.3.0",
-    "mocha": "^6.0.0",
-    "nyc": "^14.0.0"
+    "eslint": "^6.0.1",
+    "husky": "^2.7.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
   }
 }
