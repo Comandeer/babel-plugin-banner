@@ -72,19 +72,19 @@
     "@babel/core": ">=7.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "@comandeer/eslint-config": "^0.2.1",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "@comandeer/eslint-config": "^0.2.2",
     "@comandeer/is-ci": "^2.0.0",
     "@comandeer/rollup-lib-bundler": "^0.9.0",
     "chai": "^4.2.0",
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.1",
     "commitplease": "^3.2.0",
-    "cz-conventional-changelog": "^3.0.1",
-    "eslint": "^6.0.1",
-    "husky": "^3.0.1",
-    "mocha": "^6.2.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.5.1",
+    "husky": "^3.0.9",
+    "mocha": "^6.2.2",
     "nyc": "^14.1.1"
   }
 }
